@@ -123,12 +123,13 @@ def sub_scan(target):
 		sub_domains = f"http://{sub}.{ip}" 
 		try:
 			response = requests.get(sub_domains)
+			if(response.ok):
+				print(f"{response.url} found: Code-{response.status_code}")
+			else:
+				pass
 		except requests.ConnectionError: 
 			pass
-		if(response.ok):
-			print(f"{response.url} found: Code-{response.status_code}")
-		else:
-			pass
+		
 
 
 def main():
