@@ -1,0 +1,4 @@
+python-nmap==0.7.1
+requests==2.31.0
+pyfiglet==0.8.post1
+tqdm==4.65.0
