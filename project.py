@@ -28,7 +28,8 @@ def parse_arguments():
     parser.add_argument('target', type=str, help='The IP address or URL to scan.')
     args = parser.parse_args()
     if not (is_valid_ip(args.target) or is_valid_url(args.target)):
-        raise ValueError("Invalid IP address or URL")
+        print("Invalid IP address or URL")
+        exit()
     return args
 
 def get_host(target):
